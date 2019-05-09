@@ -4,7 +4,6 @@
 bin/
 include/
 pip-selfcheck.json
-rainbow/settings.py
 # Django related 
 # src/<yourproject>/settings/local.py
 # static-cdn/  # any collected static files 
