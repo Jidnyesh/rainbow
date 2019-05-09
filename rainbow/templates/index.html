@@ -1,0 +1,13 @@
+{% for project in projects %}
+    <h3>{{ project.title }}</h3>
+    <h5>{{ project.description }}</h5>
+    <h5>{{ project.created_at }}</h5>
+    {% if project.image %}
+        <h3>{{ project.image.name }}</h3>
+        <img src="{{ project.image.url }}" class="img-responsive" height="300" width="400"><br>
+        <h3><a href="{{ project.image.url }}" target="_blank">{{ project.image.url }}</a></h3>
+        <br>
+        <br>
+    {% endif %}
+
+{% endfor %}

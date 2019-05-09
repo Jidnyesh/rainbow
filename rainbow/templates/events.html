@@ -1,0 +1,10 @@
+{% for event in events %}
+    <h3>{{ event.title }}</h3>
+    <h5>{{ event.address }}</h5>
+    {% if event.image %}
+        <img src="{{ event.image.url }}" target="_blank">
+    {% endif %}
+    <a href="{{ event.image.url }}"><h6>see image</h6></a>
+    <h5>{{ event.date }}</h5>
+
+{% endfor %}
