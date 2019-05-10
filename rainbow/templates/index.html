@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -18,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="rainbow.css">
+    <link rel="stylesheet" href="{% static 'css/rainbow.css' %}">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src="rbl.png" alt="" width="120px" height="50px" style="margin:5px 0px 0px 5px;"></a>
+                <a href="#" class="brand-logo"><img src="{% static 'rbl.png' %}" alt="" width="120px" height="50px" style="margin:5px 0px 0px 5px;"></a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-nav">
                     <i class="material-icons">
                         menu
@@ -64,7 +65,7 @@
                 This is the description on first image
             </p>
             <a href="#">
-                <img src="rainbow7.jpg" alt="" height="550px" width="100%">
+                <img src="{% static 'rainbow7.jpg' %}" alt="" height="550px" width="100%">
             </a>
             
         </div>
@@ -78,7 +79,7 @@
             </p>
             
             <a href="#">
-                <img src="rb7.jpg" alt="" height="550px" width="100%">
+                <img src="{% static 'rb7.jpg' %}" alt="" height="550px" width="100%">
             </a>
         </div>
         <!--carousel img-2-->
@@ -90,7 +91,7 @@
                 This is the description on first image
             </p>
             <a href="#">
-                <img src="rainbow6.jpg" alt="" height="550px" width="100%">
+                <img src="{% static 'rainbow6.jpg' %}" alt="" height="550px" width="100%">
             </a>
         </div>
     </div>
@@ -112,7 +113,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" id="main_card_1" data-target="modal_1">
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_1_ctn">
-                    <img src="rainbow10.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rainbow10.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -137,7 +138,7 @@
                     <h4>Modal header</h4>
                         <div class="card horizontal" id="modal_card" data-target="modal_3">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img src="rainbow10.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                                <img src="{% static 'rainbow10.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
                         
                             </div>
                             <div class="card-stacked">
@@ -171,7 +172,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" data-target='modal_2' id="main_card_2">
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_2_ctn">
-                    <img src="rb8.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rb8.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -196,7 +197,7 @@
                     <h4>Modal header</h4>
                     <div class="card horizontal" id="modal_card" data-target="modal_3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="rb8.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                            <img src="{% static 'rb8.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                         </div>
                         <div class="card-stacked">
@@ -235,7 +236,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" id="main_card_3" data-target="modal_3" >
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_3_ctn">
-                    <img src="rainbow13.jpeg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rainbow13.jpeg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -260,7 +261,7 @@
                     <h4>Modal header</h4>
                     <div class="card horizontal" id="modal_card" data-target="modal_3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="rainbow13.jpeg" alt="" class="activator" style="border-radius:5px !important;">
+                            <img src="{% static 'rainbow13.jpeg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                         </div>
                         <div class="card-stacked">
@@ -298,7 +299,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" id="main_card_4" data-target='modal_4'>
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_4_ctn">
-                    <img src="rainbow23.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rainbow23.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -323,7 +324,7 @@
                     <h4>Modal header</h4>
                     <div class="card horizontal" id="modal_card" data-target="modal_3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="rainbow23.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                            <img src="{% static 'rainbow23.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                         </div>
                         <div class="card-stacked">
@@ -368,7 +369,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" id="main_card_5" data-target="modal_5">
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_5_ctn">
-                    <img src="rainbow22.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rainbow22.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -393,7 +394,7 @@
                     <h4>Modal header</h4>
                     <div class="card horizontal" id="modal_card" data-target="modal_3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="rainbow22.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                            <img src="{% static 'rainbow22.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                         </div>
                         <div class="card-stacked">
@@ -428,7 +429,7 @@
         <div class="col s12 m12 l5">
             <div class="card modal-trigger" id="main_card_6" data-target="modal_6">
                 <div class="card-image waves-effect waves-block waves-light" id="card_img_6_ctn">
-                    <img src="rainbow23.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    <img src="{% static 'rainbow23.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                 </div>
                 <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -452,7 +453,7 @@
                     <h4>Modal header</h4>
                     <div class="card horizontal" id="modal_card" data-target="modal_3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="rainbow23.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                            <img src="{% static 'rainbow23.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
             
                         </div>
                         <div class="card-stacked">
@@ -511,7 +512,7 @@
         <div class="row">
             <div class="col s12 m12 l8">
                 <div class="img_ctn" align='center'>
-                    <img src="rainbow25.jpg" alt=""  height="450px" width="330px" id="special_event_img" >
+                    <img src="{% static 'rainbow25.jpg' %}" alt=""  height="450px" width="330px" id="special_event_img" >
                     
                 </div>
                 <!--<div class="background_img" style="position: relative;width:330px;height:450px;background: rgba(124, 119, 50, 0.692);margin-top:-457px;margin-left:127px;transform:rotate(-12.5deg);z-index: -999;"></div>-->
@@ -556,7 +557,7 @@
             <div class="col s12 m12 l6">
                 <div class="card modal-trigger" id="main_card_6" data-target="modal_7">
                     <div class="card-image waves-effect waves-block waves-light" id="card_img_7_ctn">
-                        <img src="rainbow26.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                        <img src="{% static 'rainbow26.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
                 
                     </div>
                     <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -580,7 +581,7 @@
                         <h4>Modal header</h4>
                         <div class="card horizontal" id="modal_card" data-target="modal_3">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img src="rainbow26.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                                <img src="{% static 'rainbow26.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
                 
                             </div>
                             <div class="card-stacked">
@@ -615,7 +616,7 @@
             <div class="col s12 m12 l6">
                 <div class="card modal-trigger" id="main_card_6" data-target="modal_8">
                     <div class="card-image waves-effect waves-block waves-light" id="card_img_8_ctn">
-                        <img src="rainbow_eve.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                        <img src="{% static 'rainbow_eve.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
                 
                     </div>
                     <div class="card-content" align="center" style="background:transparent;border:none;">
@@ -639,7 +640,7 @@
                         <h4>Modal header</h4>
                         <div class="card horizontal" id="modal_card" data-target="modal_3">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img src="rainbow_eve.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                                <img src="{% static 'rainbow_eve.jpg' %}" alt="" class="activator" style="border-radius:5px !important;">
                 
                             </div>
                             <div class="card-stacked">
