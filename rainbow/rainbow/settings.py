@@ -114,8 +114,8 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn","media_root")
 
 #AWS configuration
 
-AWS_ACCESS_KEY_ID = 'AKIARUGQXMPZED2KZC25'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIARUGQXMPZP2QKGHCE'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'publicrootkings'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
@@ -136,5 +136,17 @@ django_heroku.settings(locals())
 
 #database config
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+#sendgrid
+
+SENDGRID_API_KEY = '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'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'jidnyeshaj'
+EMAIL_HOST_PASSWORD = 'sendgrid1234'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'jidnyeshaj@gmail.com'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'rainbowcreations'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
