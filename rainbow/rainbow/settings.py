@@ -142,11 +142,11 @@ django_heroku.settings(locals())
 #sendgrid
 
 SENDGRID_API_KEY = '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'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'jidnyeshaj'
-EMAIL_HOST_PASSWORD = 'sendgrid1234'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'jidnyeshaj@gmail.com'
-ACCOUNT_EMAIL_SUBJECT_PREFIX = 'rainbowcreations'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'jidnyeshaj'
+# EMAIL_HOST_PASSWORD = 'sendgrid1234'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'jidnyeshaj@gmail.com'
+# ACCOUNT_EMAIL_SUBJECT_PREFIX = 'rainbowcreations'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
