@@ -1,0 +1,134 @@
+nav .container{
+    width: 95%;
+}
+nav{
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+body{
+    font-family: Alegreya Sans;
+}
+.card{
+    border-radius: 30px;
+    box-shadow:1.25rem 1.375rem 30px 5px rgba(0, 0, 0, 0.250);  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3% !important;
+} 
+.eve_ctn{
+    width: 100%;
+}
+.date_ctn{
+    text-align:center;background:rgba(184,157,79,0.8);
+    padding-top:15px;
+    padding-bottom: 15px;margin-bottom: 20px;
+}
+.day_style{
+    font-weight:bolder;font-size:16px;
+    font-family:Alegreya SC;letter-spacing: 1px;
+    color:rgba(122, 97, 22, 0.815);
+}
+.date_day{
+    display:block;font-size:40px;font-weight:700;color: white;
+}
+.date_month{
+    font-weight:bolder;font-size:16px;
+    font-family:Alegreya SC;
+    letter-spacing: 1px;color:rgba(122, 97, 22, 0.815);
+}
+.img_ctn_style{
+    padding-top:0px !important;
+    padding: 0px !important;
+    display: inline;background: rgb(255, 255, 255);
+}
+.img_eve_style{
+    box-shadow:1.25rem 1.375rem 20px 5px rgba(0, 0, 0, 0.300);
+    margin-top:0px !important;margin-left:50px;
+}
+.eve_topic_ctn{
+    padding-top:45px;display: inline;
+    background: rgba(255, 255, 255, 0);
+    padding-left:40px;
+}
+.link_eve_topic{
+    color:black;font-weight: bold;
+}
+.event_topic_head{
+    font-size:23px;
+    font-family: Cinzel Decorative;
+}
+.sub_topic_eve{
+    font-size:23px;display: block;letter-spacing: 1px;
+}
+.logo_time_ctn{
+    font-size:13px;display: block;
+    letter-spacing: 1px;color: rgb(187, 164, 34);margin-top: 5px;
+}
+.clk_logo{
+    color:rgb(187, 164, 34);font-size:13px;
+}
+.divider_line{
+    margin-top:30px;margin-bottom:30px;
+    border:0.5px solid rgba(167, 164, 164, 0.418);
+    width: 85%;
+}
+.golden_sub_head{
+    display:block;color:rgb(187, 164, 34);font-size: 20px;font-weight:550;
+    font-family: Cinzel Decorative;
+}
+.golden_head_line{
+    height:90px;border-right:1px solid rgb(223, 185, 71);margin-top:20px;
+}
+.top_heading{
+    font-family: Cinzel Decorative;
+}
+.footer_link li a{
+    color: white;
+    font-family: Alegreya Sans;
+}
+.footer_start{
+    margin-top: 100px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+.footer_con_head{
+    font-weight: 600;
+    font-family: Cinzel Decorative;
+    color:rgb(255, 255, 255);
+}
+.footer_content{
+    color:rgb(255, 255, 255);letter-spacing: 1px;font-family: Alegreya Sans;
+}
+.footer_link_head{
+    font-family: Cinzel Decorative;
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+}
+.footer-copyright{
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+.cr_text{
+    font-family: Alegreya Sans;
+    color: rgb(255, 255, 255);
+}
+.more_link{
+    font-family: Alegreya Sans;
+    color: rgb(255, 255, 255);
+}
+#modal_card{
+            box-shadow: none;
+            padding: 0px;
+            border-radius:5px;
+        }
+        #modal_card_content{
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        /*::-webkit-scrollbar{
+            width:0px !important;
+            display: none !important;
+        }*/
+           
+        .modal_par{
+            font-size: 20px;
+            letter-spacing: 1px;
+        }

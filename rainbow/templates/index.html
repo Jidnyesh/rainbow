@@ -1,62 +1,29 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
 {% load static %}
-<html lang="en">
+<!--Title-->
+{% block title %}
+ Rainbow | Home
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Content</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/rainbow.css' %}">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% endblock %}
 
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="airchat_org_description.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/rainbow.css' %}">
-</head>
+<!--Styles if any-->
+{% block style %}
+{% endblock %}
 
-<body>
-    <!--Navbar-->
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src="{% static 'images/rbl.png' %}" alt="" width="120px" height="50px" style="margin:5px 0px 0px 5px;"></a>
-                <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-                    <i class="material-icons">
-                        menu
-                    </i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <li class="active"><a href="#" >Story</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!--side navbar-->
-    <ul class="sidenav" id="mobile-nav">
-        <li  class="active"><a href="#" id="snl">Story</a></li>
-        <li><a href="#" id="snl">Products</a></li>
-        <li><a href="#" id="snl">Services</a></li>
-        <li><a href="#" id="snl">Portfolio</a></li>
-        <li><a href="#" id="snl">Events</a></li>
-        <li><a href="#" id="snl">Contacts</a></li>
-        <li><a href="#" id="snl">About</a></li>
-    </ul>
-    <!--carousel-->
-    <div class="carousel carousel-slider center">
+<!--Blocks for making the specific part of nav bar Grey according to page-->
+{% block home %}class="active"{% endblock %}
+<!--Same but for responsive part of nav-->
+{% block home1 %}class="active"{% endblock %}
+
+
+{% block body %}
+    
+<div class="carousel carousel-slider center">
         <div class="carousel-item">
             <p class='hide-on-small-only slide_one_title' >
                 Panel One
@@ -244,9 +211,6 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="row">
         <div class="col m1 l1"></div>
         <!--Third image-->
@@ -392,11 +356,6 @@
         <div class="m1 l1"></div>
         
     </div>
-
-
-    
-
-
     <!--<div class="row">
         <div class="col s12 m1 l1"></div>
         <div class="col s12 m4 l4">
@@ -926,113 +885,68 @@
     </div>
 
 
-    
-    
+{% endblock %}
 
-    <!--footer-->
-    <footer class="page-footer" style="background:rgb(2, 29, 31);margin-top:100px;">
-        <div class="container">
-            <div class="row">
-                <div class="col l5 s12">
-                    <h5 style="color:rgba(228, 180, 38, 0.8);">Footer Content</h5>
-                    <p style="color:rgb(255, 255, 255);letter-spacing: 1px;font-family: Alegreya SC;">
-                        Content such as address,contact details,etc can be included.
-                    </p>
-                </div>
-                <div class="col l1"></div>
-                <div class="col l6 s12">
-                    <h5  style="color:rgba(228, 180, 38, 0.8);">
-                        Links
-                    </h5>
-                    <ul style="font-family: Alegreya ;">
-                        <li><a href="#" style="color:rgb(255, 255, 255);">Home</a></li>
-                        <li><a href="#" style="color:rgb(255, 255, 255);">About</a></li>
-                        <li><a href="#" style="color:rgb(255, 255, 255);">Contact</a></li>
-                        <li><a href="#" style="color:rgb(255, 255, 255);">Work with us</a></li>
-                        <li><a href="#" style="color:rgb(255, 255, 255);">Branches</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright" style='background:rgb(1, 19, 20);'>
-            <div class="container" style="font-family: Alegreya SC;color: rgba(228, 180, 38, 0.8);">
-                © 2014 Copyright Text
-        
-                <div class=" right" style="font-family: Alegreya SC;color: rgba(228, 180, 38, 0.8);">
-                    More
-                </div>
-            </div>
-        </div>
-    </footer>
+{% block script %}
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search_par");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("names_col");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("span")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+ $('.carousel').carousel();
+    setInterval(function () {
+        $('.carousel').carousel('next');
+    }, 3000);
+
+// Or with jQuery
+
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
 
 
 
-    <!--  Scripts-->
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        function myFunction() {
-                var input, filter, ul, li, a, i, txtValue;
-                input = document.getElementById("search_par");
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("names_col");
-                li = ul.getElementsByTagName("li");
-                for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("span")[0];
-                    txtValue = a.textContent || a.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        li[i].style.display = "";
-                    } else {
-                        li[i].style.display = "none";
-                    }
-                }
-            }
 
-             $('.carousel').carousel();
-                setInterval(function () {
-                    $('.carousel').carousel('next');
-                }, 3000);
+$(document).ready(function () {
+    $('.collapsible').collapsible();
+});
 
-            // Or with jQuery
+$(document).ready(function () {
+    $('.parallax').parallax();
+});
+var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+});
 
-            $(document).ready(function () {
-                $('.sidenav').sidenav();
-            });
-            
-            
+// Or with jQuery
 
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+});
 
-            $(document).ready(function () {
-                $('.collapsible').collapsible();
-            });
+document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+    });
 
-            $(document).ready(function () {
-                $('.parallax').parallax();
-            });
-          var instance = M.Carousel.init({
-                fullWidth: true,
-                indicators: true
-            });
+    // Or with jQuery
 
-            // Or with jQuery
-
-            $('.carousel.carousel-slider').carousel({
-                fullWidth: true,
-                indicators: true
-            });
-
-            document.addEventListener('DOMContentLoaded', function () {
-                    var elems = document.querySelectorAll('.modal');
-                    var instances = M.Modal.init(elems, options);
-                });
-
-                // Or with jQuery
-
-                $(document).ready(function () {
-                    $('.modal').modal();
-                });
-    </script>
-
-    </body>
-    </html>
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+{% endblock %}

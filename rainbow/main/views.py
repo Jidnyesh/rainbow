@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 # from django.core.mail import send_mail
 from django.template.loader import get_template
 from .models import Project,Event
@@ -21,27 +21,34 @@ def events(request):
     return render(request,"events.html",context)
 
 def about(request):
-    return render(request,"about.html",context)
+    return render(request,"about.html")
+
+
 
 def contact(request):
-    return render(request,"contact.html",context)
+    if request.method == 'POST':
+        name = request.POST['full-name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        content = request.POST['content']
+        print(name,email,phone,content)
 
-def mail(request):
-    SENDGRID_API_KEY="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"
+        SENDGRID_API_KEY="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"
 
-    message = Mail(
-        from_email='tatti@example.com',
-        to_emails='jidnyeshaj@gmail.com',
-        subject='Sending with Twilio SendGrid is Fun',
-        html_content='<strong>and easy to do anywhere, even with Python</strong>')
-    try:
-        sg = SendGridAPIClient(SENDGRID_API_KEY)
-        response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
-        print(e.message)
+        message = Mail(
+            from_email=email,
+            to_emails='jidnyeshaj@gmail.com',
+            subject='Mail from rainbow creations website',
+            html_content=content)
+        try:
+            sg = SendGridAPIClient(SENDGRID_API_KEY)
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e.message)
+        return redirect('index')
 
             
-    return render(request,"test.html",{'a':a,'a1':a1,'a2':a2})
+    return render(request,"contact.html")

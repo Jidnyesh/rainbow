@@ -1,10 +1,178 @@
-{% for event in events %}
-    <h3>{{ event.title }}</h3>
-    <h5>{{ event.address }}</h5>
-    {% if event.image %}
-        <img src="{{ event.image.url }}" target="_blank">
-    {% endif %}
-    <a href="{{ event.image.url }}"><h6>see image</h6></a>
-    <h5>{{ event.date }}</h5>
+{% extends 'layout.html' %}
 
-{% endfor %}
+<!--Title-->
+{% block title %}
+ Rainbow | Events
+{% endblock %}
+
+<!--Haed tags-->
+{% block head %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% endblock %}
+
+<!--Styles if any-->
+{% block style %}
+{% endblock %}
+
+<!--Blocks for making the specific part of nav bar Grey according to page-->
+{% block events %}class="active"{% endblock %}
+<!--Same but for responsive part of nav-->
+{% block events1 %}class="active"{% endblock %}
+
+<!--Body tags-->
+{% block body %}
+<div class="container eve_ctn">
+    <div class="row">
+        <div class="col  l1"></div>
+        <div class="col s12 m12 l10">
+            <div class="card">
+                <div class="row">
+                    <div class="container">
+                        <div class="header" align='center'>
+                            <h1 class="top_heading">Future Events</h1>
+                            <span class="golden_sub_head">All about creations</span>
+                        </div>
+                    </div>
+                    <div class="col s6 m6 l6 golden_head_line"></div>
+                </div>
+
+                {% for event in events %}
+                <div class="row">
+                    <a href="#modal_1" class="modal-trigger">
+                        <div class="col s12 m12 l1">
+                            <div class="date_ctn header">
+                                <span class="day_style">{{ event.date }}</span>
+                                <span class="date_day">  </span>
+                            </div>
+                        </div>
+                        <div class="col s6 m5 l3  img_ctn_style">
+                            <div class="img_event_ctn">
+                                {% if event.image %}
+                                <img src="{{ event.image.url }}" alt="" width="190px" width="190px" class="img_eve_style">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col s6 m7 l8" class="eve_topic_ctn">
+                            <a href="#modal_1" class="modal-trigger link_eve_topic">
+                                <div class="event_topic_head">
+                                    Topic of the event
+                                    <span class="sub_topic_eve">
+                                        And Organized By</span>
+                                    <span class="logo_time_ctn">
+                                        <i class="material-icons clk_logo">access_alarm</i> 18:00
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+
+                    <!--modal 1-->
+                    <div class="modal modal-fixed-footer" id="modal_1">
+                        <div class="modal-content" style="font-family:Alegreya Sans;">
+                            <h4>Modal header</h4>
+                            <div class="card horizontal" id="modal_card" data-target="modal_3">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="rainbow_eve.jpg" alt="" class="activator" style="border-radius:5px !important;">
+                    
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content" id="modal_card_content">
+                                        {{ event.description }}
+                                    </div>
+                                    <div class="card_title" style="text-align: right;">
+                                        <span id="event_add_5">
+                                            {{ event.location }}
+                                        </span>
+                                        <span id="event_time_5">
+                                            {{ event.date }} |
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="modal-close waves-effet waves-light waves-green btn-flat" style="font-family:Alegreya Sans;">view</a>
+                            <a class="modal-close waves-effet waves-light waves-green btn-flat" style="font-family:Alegreya Sans;">close</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <hr class="divider_line">
+                {% endfor %}
+            
+            
+            
+            </div>
+        </div>
+        <div class="col l1"></div>
+    </div>
+</div>
+{% endblock %}
+
+<!--Scripts-->
+{% block script %}
+
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("search_par");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("names_col");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        $('.carousel').carousel();
+        setInterval(function () {
+            $('.carousel').carousel('next');
+        }, 3000);
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+
+
+
+
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+        var instance = M.Carousel.init({
+            fullWidth: true,
+            indicators: true
+        });
+
+        // Or with jQuery
+
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+{% endblock %}

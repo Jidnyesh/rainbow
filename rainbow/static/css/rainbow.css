@@ -9,10 +9,7 @@
         .card-image img:hover {
             transform: scale(1.03);
         }
-        nav{
-            border:none;
-            background:linear-gradient(to right,rgb(1, 1, 20),rgb(10, 77, 77),rgb(9, 218, 200));
-        }
+        
         .slide_one_title{
             background: linear-gradient(to right,rgb(1, 1, 20),rgb(19, 133, 133));
             -webkit-background-clip: text;

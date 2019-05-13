@@ -1,0 +1,137 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Rainbow | Contact
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% endblock %}
+
+{% block contacts %}class="active"{% endblock %}
+{% block contacts1 %}class="active"{% endblock %}
+
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="col s1 m2 l6 bg_img_ctn">
+                <img src="{% static 'images/cu7.png' %}" alt="" width="400px" height="450px" class="logo_img hide-on-med-and-down">
+            </div>
+            <div class="col s10 m8 l6">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="light center card_header">Contact Us</h3>
+                        <!--<h5 class="light center">Rainbow Creations</h5>-->
+
+                        <div class="row">
+                            <form action="#" method="post">{% csrf_token %}
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input type="text" id="icon_prefix" name="full-name" class="validate" required>
+                                    <label for="icon_prefix">Full Name</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input type="tel" name="phone" id="icon_telephone" name="phone" class="validate" required>
+                                    <label for="icon_telephone">Contact No.</label>
+                                </div>
+                                <div class="input-field col s12 l6">
+                                    <i class="material-icons prefix">email</i>
+                                    <input type="email" id="icon_email" name="email" class="validate" required>
+                                    <label for="icon_email">Email id.</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">comments</i>
+                                    <textarea id="textarea1" name="content" class="materialize-textarea" cols="30" rows="10"></textarea>
+                                    <label for="textarea1">Message</label>
+                                </div>
+                                <div class="col s12 m12 l12 center btn_ctn">
+                                    <button type="submit" class="btn center sub_btn">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s1 m2"></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("search_par");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("names_col");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("span")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+$('.carousel').carousel();
+setInterval(function () {
+    $('.carousel').carousel('next');
+}, 3000);
+
+// Or with jQuery
+
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
+
+
+
+
+$(document).ready(function () {
+    $('.collapsible').collapsible();
+});
+
+$(document).ready(function () {
+    $('.parallax').parallax();
+});
+var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+});
+
+// Or with jQuery
+
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function () {
+    $('.modal').modal();
+});
+function showpas() {
+    var x = document.getElementById('cfm_pas');
+    if (x.type === "password") {
+        x.type = "text";
+    }
+    else {
+        x.type = "password";
+    }
+}
+
+{% endblock %}
