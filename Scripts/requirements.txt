@@ -22,7 +22,7 @@ numpy==1.16.1
 opencv-contrib-python==4.0.0.21
 pefile==2018.8.8
 Pillow==5.4.1
-pipenv==2018.11.26
+pipenv==2022.1.8
 progressbar==2.5
 psycopg2==2.8.2
 PyAudio==0.2.11
